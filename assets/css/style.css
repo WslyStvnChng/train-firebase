@@ -1,6 +1,7 @@
 body {
   width: 100%;
   font-family: "Lato", sans-serif;
+  max-height: 100%;
 }
 
 .jumbotron {
@@ -8,13 +9,21 @@ body {
   margin: 0 auto;
   background: navy;
   color: white;
+  padding-bottom: 0px;
+  padding-top: 0px;
 }
 
 .display-4 {
   font-size: 60px;
   font-weight: bold;
+  text-decoration: underline red;
+
 }
 
 .lead {
   font-size: 15px;
+}
+
+form {
+  font-size: 10px;
 }
