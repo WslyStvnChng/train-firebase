@@ -1,0 +1,20 @@
+body {
+  width: 100%;
+  font-family: "Lato", sans-serif;
+}
+
+.jumbotron {
+  text-align: center;
+  margin: 0 auto;
+  background: navy;
+  color: white;
+}
+
+.display-4 {
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.lead {
+  font-size: 15px;
+}

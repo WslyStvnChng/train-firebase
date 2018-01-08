@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Train Firebase</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy"
+    crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+</head>
+
+<body>
+
+  <div class="main-container">
+    <div class="jumbotron">
+      <div class="header-container">
+        <h1 class="display-4 mt-0">TUBE</h1>
+        <p class="lead">London Underground Transportation
+          <br> Using API and Firebase forumla to find train schedule
+        </p>
+      </div>
+    </div>
+    <div class="schedule-container">
+      <!-- Js File Insert with Tables -->
+    </div>
+
+    <div class="add-container">
+      <form>
+        <div class="form-group">
+          <label for="">Train Name</label>
+          <input type="text" class="" id="search-term" placeholder="">
+        </div>
+        <div class="form-group">
+          <label for="">Destination</label>
+          <input type="text" class="" id="num-records" placeholder="">
+        </div>
+        <div class="form-group">
+          <label for="">First Train Time (HH:mm - military time)</label>
+          <input type="text" class="" id="start-year" placeholder="">
+        </div>
+        <div class="form-group">
+          <label for="">Frequency</label>
+          <input type="text" class="" id="end-year" placeholder="">
+        </div>
+      </form>
+      <button type="button" class="btn btn-secondary" id="search">Submit</button>
+    </div>
+  </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="./assets/javascript/train.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+</body>
+
+</html>
