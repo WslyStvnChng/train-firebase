@@ -5,10 +5,19 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Train Firebase</title>
+
+  <!-- BootStrap -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy"
     crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+  
+    <!-- jQuery -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  
+  <!-- FireBase -->
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  
+  <!-- Own CSS -->
+  <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
 </head>
 
 <body>
@@ -18,7 +27,7 @@
       <div class="header-container">
         <h1 class="display-4 mt-0">TUBE</h1>
         <p class="lead">London Underground Transportation
-          <br> Using API and Firebase forumla to find train schedule
+          <br> Using JS and Firebase forumla to find train schedule
         </p>
         <body onLoad="initClock()">
           <div id="timedate">
@@ -38,7 +47,7 @@
       <!-- Js File Insert with Tables -->
     </div>
 
-    <span class="search-container">
+    <!-- <span class="search-container">
       <form>
         <div class="form-group">
           <label for="">Train Name</label>
@@ -58,7 +67,7 @@
         </div>
       </form>
       <button type="button" class="btn btn-secondary" id="search">Submit</button>
-    </span>
+    </span> -->
   </div>
 
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
