@@ -9,13 +9,13 @@
   <!-- BootStrap -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy"
     crossorigin="anonymous">
-  
-    <!-- jQuery -->
+
+  <!-- jQuery -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-  
+
   <!-- FireBase -->
   <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
-  
+
   <!-- Own CSS -->
   <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
 </head>
@@ -44,36 +44,64 @@
       </div>
     </div>
     <div class="schedule-container">
-      <!-- Js File Insert with Tables -->
+      <div class="schedule-heading">
+        <h3 class="schedule-current">
+          <strong>Current Train Schedule</strong>
+        </h3>
+      </div>
+      <div class="schedule-body">
+        <table class="table table-dot" id="trainTable">
+          <thead>
+            <tr>
+              <th>Train Name</th>
+              <th>Destination</th>
+              <th>Next Arrival(HH:mm)</th>
+              <th>Frequency(minutes)</th>
+              <th>Minutes Away</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Insert  -->
+          </tbody>
+        </table>
+      </div>
     </div>
 
-    <!-- <span class="search-container">
-      <form>
-        <div class="form-group">
-          <label for="">Train Name</label>
-          <input type="text" class="" id="search-term" placeholder="">
-        </div>
-        <div class="form-group">
-          <label for="">Destination</label>
-          <input type="text" class="" id="num-records" placeholder="">
-        </div>
-        <div class="form-group">
-          <label for="">First Train Time (HH:mm - military time)</label>
-          <input type="text" class="" id="start-year" placeholder="">
-        </div>
-        <div class="form-group">
-          <label for="">Frequency</label>
-          <input type="text" class="" id="end-year" placeholder="">
-        </div>
-      </form>
-      <button type="button" class="btn btn-secondary" id="search">Submit</button>
-    </span> -->
-  </div>
+    <!-- Add Trains -->
+    <div class="add-container">
+      <div class="add-heading">
+        <h2 class="add-current">
+          <strong>Add Trains</strong>
+        </h2>
+      </div>
+      <div class="form-body">
+      <!-- Entry Form -->
+        <form>
+          <div class="form-group">
+            <label for="">Train Name</label>
+            <input type="text" class="form-data" id="trainNameInput" placeholder="">
+          </div>
+          <div class="form-group">
+            <label for="">Destination</label>
+            <input type="text" class="form-data" id="destinationInput" placeholder="">
+          </div>
+          <div class="form-group">
+            <label for="">First Train Time (HH:mm - ex: 18:00)</label>
+            <input type="text" class="form-data" id="timeInput" placeholder="">
+          </div>
+          <div class="form-group">
+            <label for="">Frequency</label>
+            <input type="text" class="form-data" id="frequencyInput" placeholder="">
+          </div>
+        </form>
+        <button type="submit" class="btn btn-secondary" id="addTrainButton">Submit</button>
+      </div>
+    </div>
 
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-    crossorigin="anonymous"></script>
-  <script type="text/javascript" src="./assets/javascript/train.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./assets/javascript/train.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 </body>
 
 </html>

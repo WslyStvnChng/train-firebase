@@ -53,43 +53,23 @@ function initClock() {
   // Create a variable to reference the database
   var database = firebase.database();
 
-  // // Initial Values
-  // var time = "";
-  // var trainNames = "";
-  // var arrivalTime = "";
-  // var minutesArrivalTime = trainNames + time; 
+  // Capture Button Click
 
-  // // Initial load and subsequent value changes, get snapshot of the stored data
-  // // Update page in real-time when the firebase database changes
+  $("#addTrainButton").on("click", function() {
+    event.preventDefault();
 
-  // database.ref().on("value", function (snapshot){
+    // Initial Values from DOM
+    var trainName = $("#trainNameInput").val().trim();
+    var destination = $("#destinationInput").val().trim();
+    var firstTrain = $("#timeInput").val().trim();
+    var frequency = $("#frequencyInput").val().trim();
 
-  // })
+    // Verifying the on.click button works 
+    console.log(trainName);
+    console.log(destination);
+    console.log(firstTrain);
+    console.log(frequency);
 
-  function makeTable(container, data) {
-    var table = $("<table/>").addClass("ScheduleTable");
-    $.each(data, function(rowIndex, r){
-      var row = $("<tr/>");
-      $.each(r, function(colIndex, c) {
-        row.append($("<t" + (rowIndex == 0 ? "h" : "d") + ">").text(c));
-      });
-      table.append(row);
-    });
-    return container.append(table);
-  }
-
-  $(document).ready(function() {
-    var data = [["Train Name", "Destination", "Frequency (min)", "Next Arrival", "Minutes Away"],
-  ["Bakerloo", "Heathrow", "5", "00:00", "5 minutes"],
-  ["Central", "Heathrow", "5", "00:00", "5 minutes"],
-  ["Circle", "Heathrow", "5", "00:00", "5 minutes"],
-  ["District", "Heathrow", "5", "00:00", "5 minutes"],
-  ["Jubilee & City", "Heathrow", "5", "00:00", "5 minutes"],
-  ["Metropolitan", "Heathrow", "5", "00:00", "5 minutes"],
-  ["Northern", "Heathrow", "5", "00:00", "5 minutes"],
-  ["Piccadilly", "Heathrow", "5", "00:00", "5 minutes"],
-  ["Victoria", "Heathrow", "5", "00:00", "5 minutes"],
-  ["Waterloo & City", "Heathrow", "5", "00:00", "5 minutes"]]
-  var cityTable = makeTable($(document.body), data);
-  
+    // Creating object to hold train data
+    var newTrain = { name: trainName, where: destination, whichTrain: firstTrain, howLong: frequency};
   });
