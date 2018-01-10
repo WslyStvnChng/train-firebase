@@ -1,44 +1,3 @@
-// Clock
-Number.prototype.pad = function(n) {
-  for (var r = this.toString(); r.length < n; r = 0 + r);
-  return r;
-};
-
-function updateClock() {
-  var now = new Date();
-  var milli = now.getMilliseconds(),
-    sec = now.getSeconds(),
-    min = now.getMinutes(),
-    hou = now.getHours(),
-    mo = now.getMonth(),
-    dy = now.getDate(),
-    yr = now.getFullYear();
-  var months = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December"
-  ];
-  var tags = ["mon", "d", "y", "h", "m", "s", "mi"],
-    corr = [months[mo], dy, yr, hou.pad(2), min.pad(2), sec.pad(2), milli];
-  for (var i = 0; i < tags.length; i++)
-    document.getElementById(tags[i]).firstChild.nodeValue = corr[i];
-}
-
-function initClock() {
-  updateClock();
-  window.setInterval("updateClock()", 1);
-}
-// End of Clock
-
 // Initialize Firebase
   var config = {
     apiKey: "AIzaSyCNksDk64_EDLqbzbzKdAnnTqIW4sW_niE",
@@ -47,29 +6,69 @@ function initClock() {
     projectId: "train-firebase-d8505",
     storageBucket: "",
     messagingSenderId: "1040464824477"
-  };
+};
   firebase.initializeApp(config);
 
   // Create a variable to reference the database
   var database = firebase.database();
 
   // Capture Button Click
-
-  $("#addTrainButton").on("click", function() {
+$("#addTrainButton").on("click", function() {
     event.preventDefault();
 
-    // Initial Values from DOM
-    var trainName = $("#trainNameInput").val().trim();
-    var destination = $("#destinationInput").val().trim();
-    var firstTrain = $("#timeInput").val().trim();
-    var frequency = $("#frequencyInput").val().trim();
+    // Initial Values from DOM. Taking user's input
+    var trainName = $("#trainNameInput")
+      .val()
+      .trim();
+    var trainDestination = $("#destinationInput")
+      .val()
+      .trim();
+    var trainTime = $("#timeInput")
+      .val()
+      .trim();
+      //parseInt string to integer 
+    var trainFrequency = parseInt($("#frequencyInput")
+      .val()
+      .trim());
 
-    // Verifying the on.click button works 
-    console.log(trainName);
-    console.log(destination);
-    console.log(firstTrain);
-    console.log(frequency);
+    // Verifying the on.click button works
 
-    // Creating object to hold train data
-    var newTrain = { name: trainName, where: destination, whichTrain: firstTrain, howLong: frequency};
-  });
+    // console.log(trainName);
+    // console.log(trainDestination);
+    // console.log(trainTime);
+    // console.log(trainFrequency);
+
+    var newTrain = {
+      name: trainName,
+      destination: trainDestination,
+      time: trainTime,
+      frequency: trainFrequency
+    };
+//Firebase write on main level push it above; and when add train is submit it will read 
+ database.ref().push(newTrain);
+ 
+//  console.log("Whatssssups");
+
+//find every form group, points to the child in css
+ $(".form-group > input").val("");
+ });
+
+
+  // Creating object to hold train data
+
+  //   // Firebase watcher + initial load ex: .on("value")
+  //  
+  //     //Log everything that's coming out of snapshot
+  //     console.log(snapshot.val());
+  //     console.log(snapshot.val().name);
+  //     console.log(snapshot.val().where);
+  //     console.log(snapshot.val().whichTrain);
+  //     console.log(snapshot.val().howLong);
+  //     console.log(snapshot.val().frequency);
+  //   });
+
+  //   //Insert table
+  //   $(".table").append("<tr> <td>" + snapshot.val().name + "</td>" + "<td>" + snaphot.val().where + "</td>" + "<td>" + snapshot.val().whichTrain + "</td>" + "<td>" + snapshot.val().howLong + "</td>" + "<td>" + snapshot.val().frequency + "</td>" + "<td>");
+    
+  //   console.log(snapshot.val());
+  // });

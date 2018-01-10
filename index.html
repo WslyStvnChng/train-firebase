@@ -13,6 +13,9 @@
   <!-- jQuery -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 
+  <!-- Moment.JS -->
+  <script src="https://cdn.jsdelivr.net/npm/moment@2.20.1/moment.min.js"></script>
+
   <!-- FireBase -->
   <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
 
@@ -29,18 +32,6 @@
         <p class="lead">London Underground Transportation
           <br> Using JS and Firebase forumla to find train schedule
         </p>
-        <body onLoad="initClock()">
-          <div id="timedate">
-            <a id="mon">January</a>
-            <a id="d">1</a>,
-            <a id="y">0</a>
-            <br />
-            <a id="h">12</a> :
-            <a id="m">00</a>:
-            <a id="s">00</a>:
-            <a id="mi">000</a>
-          </div>
-        </body>
       </div>
     </div>
     <div class="schedule-container">
@@ -75,23 +66,23 @@
         </h2>
       </div>
       <div class="form-body">
-      <!-- Entry Form -->
+        <!-- Entry Form -->
         <form>
           <div class="form-group">
-            <label for="">Train Name</label>
+            <label>Train Name</label>
             <input type="text" class="form-data" id="trainNameInput" placeholder="">
           </div>
           <div class="form-group">
-            <label for="">Destination</label>
+            <label>Destination</label>
             <input type="text" class="form-data" id="destinationInput" placeholder="">
           </div>
           <div class="form-group">
-            <label for="">First Train Time (HH:mm - ex: 18:00)</label>
+            <label>First Train Time (HH:mm - ex: 18:00)</label>
             <input type="text" class="form-data" id="timeInput" placeholder="">
           </div>
           <div class="form-group">
-            <label for="">Frequency</label>
-            <input type="text" class="form-data" id="frequencyInput" placeholder="">
+            <label>Frequency</label>
+            <input type="number" class="form-data" id="frequencyInput" placeholder="">
           </div>
         </form>
         <button type="submit" class="btn btn-secondary" id="addTrainButton">Submit</button>
