@@ -9,10 +9,33 @@
 };
   firebase.initializeApp(config);
 
-  // Create a variable to reference the database
   var database = firebase.database();
 
-  // Capture Button Click
+  //will run on initial load and anytime data changes
+  database.ref().on("child_added", function(snapshot){
+
+    //Console.log to see if
+    console.log(snapshot.val());
+    console.log(snapshot.val().frequency);
+    console.log(snapshot.val().time);
+    console.log(snapshot.val().destination);
+    console.log(snapshot.val().name);
+
+    //temprete literal to make the rows
+    var newRow = `<tr>
+    <td>${snapshot.val().name}</td>
+    <td>${snapshot.val().destination}</td>
+    <td>${snapshot.val().frequency}</td>
+    <td>${snapshot.val().time}</td>
+    </tr>`;
+
+    $("tbody").append(newRow);
+
+
+  });
+
+
+  // when the user submit a train via the form
 $("#addTrainButton").on("click", function() {
     event.preventDefault();
 
@@ -54,21 +77,7 @@ $("#addTrainButton").on("click", function() {
  });
 
 
-  // Creating object to hold train data
-
-  //   // Firebase watcher + initial load ex: .on("value")
-  //  
-  //     //Log everything that's coming out of snapshot
-  //     console.log(snapshot.val());
-  //     console.log(snapshot.val().name);
-  //     console.log(snapshot.val().where);
-  //     console.log(snapshot.val().whichTrain);
-  //     console.log(snapshot.val().howLong);
-  //     console.log(snapshot.val().frequency);
-  //   });
-
-  //   //Insert table
-  //   $(".table").append("<tr> <td>" + snapshot.val().name + "</td>" + "<td>" + snaphot.val().where + "</td>" + "<td>" + snapshot.val().whichTrain + "</td>" + "<td>" + snapshot.val().howLong + "</td>" + "<td>" + snapshot.val().frequency + "</td>" + "<td>");
+ 
     
   //   console.log(snapshot.val());
   // });
