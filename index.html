@@ -32,6 +32,9 @@
         <p class="lead">London Underground Transportation
           <br> Using JS and Firebase forumla to find train schedule
         </p>
+        <body onload="startTime()">
+          <div id="hello"></div>
+        </body>
       </div>
     </div>
     <div class="schedule-container">
@@ -40,59 +43,66 @@
           <strong>Current Train Schedule</strong>
         </h3>
       </div>
-      <div class="schedule-body">
-        <table class="table table-dot" id="trainTable">
-          <thead>
-            <tr>
-              <th>Train Name</th>
-              <th>Destination</th>
-              <th>Frequency(minutes)</th>
-              <th>Next Arrival(HH:mm)</th>
-              <th>Minutes Away</th>
-            </tr>
-          </thead>
-          <tbody>
-            <!-- Insert  -->
-          </tbody>
-        </table>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="panel panel-default">
+            <div class="schedule-body">
+              <table class="table table-dot" id="trainTable">
+                <thead>
+                  <tr>
+                    <th>Train Name</th>
+                    <th>Destination</th>
+                    <th>Frequency(minutes)</th>
+                    <th>Next Arrival(HH:mm)</th>
+                    <th>Minutes Away</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Insert  -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
 
-    <!-- Add Trains -->
-    <div class="add-container">
-      <div class="add-heading">
-        <h2 class="add-current">
-          <strong>Add Trains</strong>
-        </h2>
+      <!-- Add Trains -->
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="add-container">
+            <div class="add-heading">
+              <h2 class="add-current">
+                <strong>Add Trains</strong>
+              </h2>
+            </div>
+            <div class="form-body">
+              <!-- Entry Form -->
+              <form>
+                <div class="form-group">
+                  <label>Train Name</label>
+                  <input type="text" class="form-data" id="trainNameInput" placeholder="">
+                </div>
+                <div class="form-group">
+                  <label>Destination</label>
+                  <input type="text" class="form-data" id="destinationInput" placeholder="">
+                </div>
+                <div class="form-group">
+                  <label>First Train Time (HH:mm - ex: 18:00)</label>
+                  <input type="text" class="form-data" id="timeInput" placeholder="">
+                </div>
+                <div class="form-group">
+                  <label>Frequency</label>
+                  <input type="number" class="form-data" id="frequencyInput" placeholder="">
+                </div>
+              </form>
+              <button type="submit" class="btn btn-secondary" id="addTrainButton">Submit</button>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="form-body">
-        <!-- Entry Form -->
-        <form>
-          <div class="form-group">
-            <label>Train Name</label>
-            <input type="text" class="form-data" id="trainNameInput" placeholder="">
-          </div>
-          <div class="form-group">
-            <label>Destination</label>
-            <input type="text" class="form-data" id="destinationInput" placeholder="">
-          </div>
-          <div class="form-group">
-            <label>First Train Time (HH:mm - ex: 18:00)</label>
-            <input type="text" class="form-data" id="timeInput" placeholder="">
-          </div>
-          <div class="form-group">
-            <label>Frequency</label>
-            <input type="number" class="form-data" id="frequencyInput" placeholder="">
-          </div>
-        </form>
-        <button type="submit" class="btn btn-secondary" id="addTrainButton">Submit</button>
-      </div>
-    </div>
-
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-      crossorigin="anonymous"></script>
-    <script type="text/javascript" src="./assets/javascript/train.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+      <script type="text/javascript" src="./assets/javascript/train.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 </body>
-
 </html>

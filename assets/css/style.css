@@ -1,39 +1,48 @@
-body {
-  width: 100%;
-  font-family: "Lato", sans-serif;
-  max-height: 100%;
-  background: white;
+    body {
+    width: 100%;
+    font-family: "Lato", sans-serif;
+    max-height: 100%;
+    background: white;
 }
 
 .jumbotron {
-  text-align: center;
-  margin: 0 auto;
-  background: navy;
-  color: white;
-  padding-bottom: 0px;
-  padding-top: 0px;
+    text-align: center;
+    margin: 0 auto;
+    background: navy;
+    color: white;
+    padding-bottom: 0px;
+    padding-top: 0px;
 }
 
 .display-4 {
-  font-size: 60px;
-  font-weight: bold;
-  text-decoration: underline red;
-
+    font-size: 60px;
+    font-weight: bold;
+    text-decoration: underline red;
 }
 
 h3 {
-  text-align: left;
-  background: red;
-  color: white;
-  margin-top: 0px;
-  border: 3px solid white;
-  width: 100%;
-  font-size: 15px;
-  /* text-transform: uppercase; */
+    text-align: center;
+    background: red;
+    color: white;
+    margin-top: 0px;
+    border: 3px solid white;
+    width: 100%;
+    font-size: 15px;
+    /* text-transform: uppercase; */
 }
+
 h2 {
-  text-align: left;
-  background: red;
-  color: white;
-  font-size: 15px;
+    text-align: center;
+    background: red;
+    color: white;
+    font-size: 15px;
+    width: 50%;
+}
+
+form {
+    width: 50%;
+}
+
+#hello {
+  font-size: 20px;
 }
