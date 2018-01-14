@@ -1,48 +1,65 @@
     body {
-    width: 100%;
-    font-family: "Lato", sans-serif;
-    max-height: 100%;
-    background: white;
-}
+        width: 100%;
+        font-family: "Lato", sans-serif;
+        max-height: 100%;
+        background: white;
+    }
 
-.jumbotron {
-    text-align: center;
-    margin: 0 auto;
-    background: navy;
-    color: white;
-    padding-bottom: 0px;
-    padding-top: 0px;
-}
+    .jumbotron {
+        text-align: center;
+        margin: 0 auto;
+        background: navy;
+        color: white;
+        padding-bottom: 0px;
+        padding-top: 0px;
+    }
 
-.display-4 {
-    font-size: 60px;
-    font-weight: bold;
-    text-decoration: underline red;
-}
+    .display-4 {
+        font-size: 60px;
+        font-weight: bold;
+        text-decoration: underline red;
+    }
 
-h3 {
-    text-align: center;
-    background: red;
-    color: white;
-    margin-top: 0px;
-    border: 3px solid white;
-    width: 100%;
-    font-size: 15px;
-    /* text-transform: uppercase; */
-}
+    h3 {
+        text-align: center;
+        background: red;
+        color: white;
+        margin-top: 0px;
+        border: 3px solid white;
+        width: 100%;
+        font-size: 15px;
+        /* text-transform: uppercase; */
+    }
 
-h2 {
-    text-align: center;
-    background: red;
-    color: white;
-    font-size: 15px;
-    width: 50%;
-}
+    h2 {
+        text-align: center;
+        background: red;
+        color: white;
+        font-size: 15px;
+        width: 100%;
+        /* border: 5px black; */
+    }
 
-form {
-    width: 50%;
-}
+    form {
+        width: 100%;
+        /* border: 9px black; */
+    }
 
-#hello {
-  font-size: 20px;
-}
+    .row-2 {
+        display: inline;
+    }
+
+    #hello {
+        font-size: 20px;
+    }
+
+    img {
+        width: 30%;
+        height: 30%;
+    }
+
+    /* row-2>img:after {
+        width: 30%;
+        height: 30%;
+        display: inline;
+    } */
